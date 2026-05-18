@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Bardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #A6A6A6; padding-bottom: 40px; }
+        .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #A6A6A6; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .back-btn { color: #FFC700; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .header-logo { max-width: 70px; height: auto; }
+        .menu-container { padding: 20px; max-width: 500px; margin: 0 auto; }
+        .category-title { color: #FFC700; font-size: 1.3rem; margin: 30px 0 20px 0; text-transform: uppercase; letter-spacing: 2px; text-align: center; font-weight: 700; }
+        .illustration { width: 100%; max-width: 250px; display: block; margin: 0 auto 20px auto; opacity: 0.9; }
+        .product-card { background-color: #A6A6A6; border-radius: 16px; padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: all 0.2s ease; border: 1px solid rgba(255, 199, 0, 0.4); box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.3); }
+        .product-card:active { transform: scale(0.97); box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.2); }
+        .product-info { flex: 1; padding-right: 15px; }
+        .product-info h3 { font-size: 1.1rem; color: #FFC700; margin-bottom: 6px; text-transform: uppercase; }
+        .product-info p { font-size: 0.85rem; color: #ffffff; opacity: 0.8; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .product-price { font-weight: 700; color: #FFC700; font-size: 1.2rem; white-space: nowrap; }
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 100; justify-content: center; align-items: center; padding: 20px; }
+        .modal-content { background-color: #A6A6A6; width: 100%; max-width: 380px; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid rgba(255, 199, 0, 0.5); box-shadow: 10px 10px 20px rgba(0,0,0,0.5); animation: slideUp 0.3s ease-out; max-height: 90vh; overflow-y: auto; }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .close-btn { position: absolute; top: 15px; right: 15px; background-color: #FFC700; color: #A6A6A6; border: none; width: 35px; height: 35px; border-radius: 50%; font-size: 1.2rem; font-weight: bold; cursor: pointer; z-index: 2; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
+        .modal-img { width: 100%; height: 250px; object-fit: cover; background-color: #888; }
+        .modal-body { padding: 25px; }
+        .modal-title { font-size: 1.5rem; color: #FFC700; margin-bottom: 10px; text-transform: uppercase; }
+        .modal-desc { font-size: 0.95rem; color: #ffffff; margin-bottom: 15px; line-height: 1.5; }
+        .modal-allergens { font-size: 0.80rem; color: #A6A6A6; background-color: #FFC700; padding: 6px 12px; border-radius: 8px; display: inline-block; font-weight: 700; }
+        .modal-price-bar { margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 199, 0, 0.3); text-align: right; font-size: 1.5rem; font-weight: 700; color: #FFC700; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">← Back</a>
+        <img src="logo.png" alt="Bardo Logo" class="header-logo">
+        <div style="width: 70px;"></div>
+    </div>
+
+    <div class="menu-container">
+
+        <h2 class="category-title">Signature Sandwiches</h2>
+        <div class="product-card" onclick="abrirPopUp('Huerta Arcoíris', 'Fresh and light vegetarian sandwich prepared on artisan bread. Without onions, without seeds, and without spinach.', '€6.50', 'huerta.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Huerta Arcoíris</h3><p>Fresh and light vegetarian...</p></div><div class="product-price">€6.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Dulce Azul', 'A daring combination with a perfect contrast, topped with crunchy fried almonds.', '€7.00', 'dulce.jpg', 'Contains: Gluten, Dairy, Nuts')">
+            <div class="product-info"><h3>Dulce Azul</h3><p>Perfect contrast with fried almonds...</p></div><div class="product-price">€7.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('El Castizo', 'Our most traditional recipe with premium ingredients for lovers of classic flavors.', '€7.50', 'castizo.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>El Castizo</h3><p>Our most traditional recipe...</p></div><div class="product-price">€7.50</div>
+        </div>
+
+        <h2 class="category-title">Toasts</h2>
+        <img src="perro_cafe.png" alt="Barista Dog" class="illustration">
+        <div class="product-card" onclick="abrirPopUp('Olive Oil Toast', 'Rustic sourdough baguette with extra virgin olive oil.', '€2.00', 'tostada_aceite.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Olive Oil</h3><p>Sourdough bread with olive oil...</p></div><div class="product-price">€2.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato Toast', 'Rustic sourdough baguette with crushed fresh tomato.', '€2.00', 'tostada_tomate.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Tomato</h3><p>Sourdough with crushed tomato...</p></div><div class="product-price">€2.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Butter & Jam', 'Rustic sourdough baguette with butter and jam.', '€2.50', 'tostada_mermelada.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Butter & Jam</h3><p>Classic sweet toast...</p></div><div class="product-price">€2.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Cream Cheese & Jam', 'Rustic sourdough baguette with cream cheese and jam.', '€2.50', 'tostada_queso_mermelada.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Cream Cheese & Jam</h3><p>Sweet and creamy touch...</p></div><div class="product-price">€2.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato & Semi-cured Cheese', 'Rustic bread with tomato and semi-cured cheese.', '€3.00', 'tostada_tomate_queso.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Tomato & Cheese</h3><p>Fresh tomato and cheese...</p></div><div class="product-price">€3.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato & Cooked Ham', 'Rustic bread with tomato and cooked ham.', '€3.50', 'tostada_tomate_jamon.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Tomato & Cooked Ham</h3><p>Classic and light...</p></div><div class="product-price">€3.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato & Serrano', 'Rustic bread with tomato and Serrano ham.', '€3.50', 'tostada_tomate_serrano.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Tomato & Serrano</h3><p>The traditional Spanish toast...</p></div><div class="product-price">€3.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Cooked Ham & Cheese', 'Rustic bread with cooked ham and semi-cured cheese.', '€4.00', 'tostada_mixta.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Cooked Ham & Cheese</h3><p>Mixed toast...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Serrano & Cheese', 'Rustic bread with Serrano ham and semi-cured cheese.', '€4.00', 'tostada_serrano_queso.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Serrano & Cheese</h3><p>Serrano ham and cheese...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato, Cooked Ham & Cheese', 'Rustic sourdough bread with tomato, cooked ham, and semi-cured cheese.', '€4.50', 'tostada_completa_cocido.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Tomato, Cooked Ham & Cheese</h3><p>Our complete toast...</p></div><div class="product-price">€4.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tomato, Serrano & Cheese', 'Rustic sourdough bread with tomato, Serrano ham, and semi-cured cheese.', '€4.50', 'tostada_completa_serrano.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Tomato, Serrano & Cheese</h3><p>Traditional complete prep...</p></div><div class="product-price">€4.50</div>
+        </div>
+
+        <h2 class="category-title">Coffee / Teas</h2>
+        <div class="product-card" onclick="abrirPopUp('Infusions', 'Chamomile / Rooibos / Green / Black.', '€1.50', 'infusion.jpg', 'No allergens')">
+            <div class="product-info"><h3>Infusions</h3><p>Variety of teas...</p></div><div class="product-price">€1.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Espresso', 'An intense coffee shot.', '€1.50', 'espresso.jpg', 'No allergens')">
+            <div class="product-info"><h3>Espresso</h3><p>Intense coffee...</p></div><div class="product-price">€1.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Long Espresso', 'Espresso with more water extraction.', '€1.50', 'solo_largo.jpg', 'No allergens')">
+            <div class="product-info"><h3>Long Espresso</h3><p>Smooth and prolonged...</p></div><div class="product-price">€1.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Cortado / Bombón', 'Espresso with a touch of milk or condensed milk.', '€1.70', 'cortado.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Cortado / Bombón</h3><p>With a touch of milk...</p></div><div class="product-price">€1.70</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Americano', 'Espresso diluted with hot water.', '€1.80', 'americano.jpg', 'No allergens')">
+            <div class="product-info"><h3>Americano</h3><p>Smooth and long coffee...</p></div><div class="product-price">€1.80</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Coffee with Milk', 'Espresso coffee with textured milk.', '€1.85', 'cafe_leche.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Coffee with Milk</h3><p>Espresso with milk...</p></div><div class="product-price">€1.85</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Capuccino', 'Espresso with abundant milk foam.', '€1.90', 'capuccino.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Capuccino</h3><p>With milk foam...</p></div><div class="product-price">€1.90</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Hot Chocolate', 'Sweet cocoa drink with milk.', '€1.90', 'colacao.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Hot Chocolate</h3><p>Classic cocoa...</p></div><div class="product-price">€1.90</div>
+        </div>
+
+        <h2 class="category-title">Iced Coffee</h2>
+        <div class="product-card" onclick="abrirPopUp('Iced Latte', 'Cold coffee with milk and ice (350cc or 500cc).', 'From €2.80', 'iced_latte.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Iced Latte</h3><p>Refreshing coffee with milk...</p></div><div class="product-price">€2.80</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Iced Latte Macchiato', 'Cold milk stained with espresso (350cc or 500cc).', 'From €2.80', 'iced_macchiato.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Iced Latte Macchiato</h3><p>Milk with a touch of coffee...</p></div><div class="product-price">€2.80</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Iced Americano', 'Americano over ice (350cc or 500cc).', 'From €2.50', 'iced_americano.jpg', 'No allergens')">
+            <div class="product-info"><h3>Iced Americano</h3><p>Refreshing and light...</p></div><div class="product-price">€2.50</div>
+        </div>
+
+        <h2 class="category-title">Puff Pastry Baskets</h2>
+        <div class="product-card" onclick="abrirPopUp('Ham & Cheese Pastry', 'Cooked ham and Emmental cheese.', '€2.50', 'hojaldre_jamon.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Ham & Cheese</h3><p>Cooked ham and Emmental...</p></div><div class="product-price">€2.50</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Ricotta & Spinach Pastry', 'Spinach, ricotta, béchamel, Emmental cheese, red pepper, nutmeg, and egg.', '€2.80', 'hojaldre_ricotta.jpg', 'Contains: Gluten, Dairy, Egg')">
+            <div class="product-info"><h3>Ricotta & Spinach</h3><p>Spinach, ricotta, béchamel...</p></div><div class="product-price">€2.80</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Chicken & Leek Pastry', 'Diced chicken, leek, and Emmental cheese.', '€2.80', 'hojaldre_pollo.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Chicken & Leek</h3><p>Chicken, leek, and cheese...</p></div><div class="product-price">€2.80</div>
+        </div>
+
+        <h2 class="category-title">Bowls & Pastries</h2>
+        <div class="product-card" onclick="abrirPopUp('Bardo Nature', 'Greek yogurt base, granola, kiwi, strawberry, blueberries, apple, and honey.', '€5.00', 'bowl_nature.jpg', 'Contains: Dairy, Gluten')">
+            <div class="product-info"><h3>Bardo Nature</h3><p>Greek yogurt, granola, kiwi...</p></div><div class="product-price">€5.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Bardo Tropical', 'Greek yogurt base, granola, coconut chips, pineapple, papaya, melon, and condensed milk or dulce de leche.', '€5.00', 'bowl_tropical.jpg', 'Contains: Dairy, Gluten')">
+            <div class="product-info"><h3>Bardo Tropical</h3><p>Greek yogurt, coconut, pineapple...</p></div><div class="product-price">€5.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Bardo Choco-Fruit', 'Greek yogurt base, sugar-free cornflakes, banana, strawberry, and chocolate-hazelnut syrup.', '€5.00', 'bowl_choco.jpg', 'Contains: Dairy, Nuts')">
+            <div class="product-info"><h3>Bardo Choco-Fruit</h3><p>Greek yogurt, banana, strawberry...</p></div><div class="product-price">€5.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Natural Croissant', 'Flaky puff pastry with butter.', '€1.60', 'croissant.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Natural Croissant</h3><p>Puff pastry and butter...</p></div><div class="product-price">€1.60</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Ham & Cheese Croissant', 'Toasted and filled with cooked ham and cheese.', '€2.70', 'croissant_mixto.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Ham & Cheese Croissant</h3><p>Filled with ham and cheese...</p></div><div class="product-price">€2.70</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Serrano Croissant', 'Toasted and filled with Serrano ham and cheese.', '€2.90', 'croissant_serrano.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Serrano Croissant</h3><p>Filled with Serrano and cheese...</p></div><div class="product-price">€2.90</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Sweet Croissant', 'Toasted with chocolate or dulce de leche.', '€2.60', 'croissant_dulce.jpg', 'Contains: Gluten, Dairy')">
+            <div class="product-info"><h3>Sweet Croissant</h3><p>With chocolate or dulce de leche...</p></div><div class="product-price">€2.60</div>
+        </div>
+
+        <h2 class="category-title">Smoothies</h2>
+        <img src="perro_smoothies.png" alt="Smoothie Dog" class="illustration">
+        <div class="product-card" onclick="abrirPopUp('Rosado Smoothie', 'Natural fruit with an apple juice base. No added sugar. Banana, strawberry, and dragon fruit. (350ml or 500ml).', 'From €4.00', 'smoothie_rosado.jpg', 'No allergens')">
+            <div class="product-info"><h3>Rosado</h3><p>Banana, strawberry, and dragon fruit...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Berry Dream', 'Natural fruit with an apple juice base. No added sugar. Strawberry, raspberry, and blueberries. (350ml or 500ml).', 'From €4.00', 'smoothie_berry.jpg', 'No allergens')">
+            <div class="product-info"><h3>Berry Dream</h3><p>Strawberry, raspberry, and blueberries...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Maña', 'Natural fruit with an apple juice base. No added sugar. Pineapple and mango. (350ml or 500ml).', 'From €4.00', 'smoothie_mana.jpg', 'No allergens')">
+            <div class="product-info"><h3>Maña</h3><p>Pineapple and mango...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Peach Paradise', 'Natural fruit with an apple juice base. No added sugar. Papaya, strawberry, and peach. (350ml or 500ml).', 'From €4.00', 'smoothie_peach.jpg', 'No allergens')">
+            <div class="product-info"><h3>Peach Paradise</h3><p>Papaya, strawberry, and peach...</p></div><div class="product-price">€4.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Mix', 'Natural fruit with an apple juice base. No added sugar. Watermelon, pineapple, and melon. (350ml or 500ml).', 'From €4.00', 'smoothie_mix.jpg', 'No allergens')">
+            <div class="product-info"><h3>Mix</h3><p>Watermelon, pineapple, and melon...</p></div><div class="product-price">€4.00</div>
+        </div>
+
+        <h2 class="category-title">Shakes & Juices</h2>
+        <div class="product-card" onclick="abrirPopUp('Fruit Shakes', 'Natural fruit, milk, and ice. Flavors: Banana, Strawberry, Strawberry & Banana, or Banana & Cocoa.', 'Ask', 'batido.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Fruit Shakes</h3><p>With milk and natural fruit...</p></div><div class="product-price">View</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Detox / Sunshine Juices', 'Detox: Cucumber, celery, lemon, apple, ginger. Sunshine: Carrot, apple, orange.', 'Ask', 'zumo_detox.jpg', 'No allergens')">
+            <div class="product-info"><h3>Classic Natural Juices</h3><p>Detox or Sunshine...</p></div><div class="product-price">View</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Red Power / Fresh Juices', 'Red Power: Beetroot, orange, apple. Fresh Fusion: Watermelon, strawberry, lemon.', 'Ask', 'zumo_red.jpg', 'No allergens')">
+            <div class="product-info"><h3>Refreshing Juices</h3><p>Red Power or Fresh Fusion...</p></div><div class="product-price">View</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tropical Juices', 'Waikiki: Kiwi, strawberry, apple. Tropical: Pineapple, spinach, apple.', 'Ask', 'zumo_tropical.jpg', 'No allergens')">
+            <div class="product-info"><h3>Tropical Juices</h3><p>Waikiki or Tropical...</p></div><div class="product-price">View</div>
+        </div>
+
+        <h2 class="category-title">Premium Milkshakes</h2>
+        <div class="product-card" onclick="abrirPopUp('Chocolate Milkshake', 'Natural fruit, milk, chocolate ice cream, whipped cream, and chocolate-hazelnut syrup.', 'Ask', 'milkshake_choco.jpg', 'Contains: Dairy, Nuts')">
+            <div class="product-info"><h3>Chocolate</h3><p>Ice cream and whipped cream...</p></div><div class="product-price">View</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Strawberry Milkshake', 'Natural fruit, milk, strawberry ice cream, whipped cream, and strawberry syrup.', 'Ask', 'milkshake_fresa.jpg', 'Contains: Dairy')">
+            <div class="product-info"><h3>Strawberry</h3><p>Ice cream and strawberry syrup...</p></div><div class="product-price">View</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Oreo Milkshake', 'Milk, cream ice cream, Oreo cookies, whipped cream, and chocolate syrup.', 'Ask', 'milkshake_oreo.jpg', 'Contains: Dairy, Gluten')">
+            <div class="product-info"><h3>Oreo</h3><p>Cream ice cream and cookies...</p></div><div class="product-price">View</div>
+        </div>
+
+        <h2 class="category-title">Drinks</h2>
+        <div class="product-card" onclick="abrirPopUp('Bottled / Canned Beer', 'Small Bottle (25cl) €1.90 / Can (33cl) €2.20. Ask for available varieties.', 'From €1.90', 'cerveza.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Beers</h3><p>Small bottle or can...</p></div><div class="product-price">€1.90</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Aguila Dorada Draft Beer', 'Small Draft (Caña) €2.00 / Large Draft (Pinta) €4.00.', 'From €2.00', 'cana.jpg', 'Contains: Gluten')">
+            <div class="product-info"><h3>Aguila Dorada Draft</h3><p>Caña or Pinta...</p></div><div class="product-price">€2.00</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Tinto de Verano', 'Sandevid Bottle €2.20 / Ladron de Verano on tap €3.50.', 'From €2.20', 'tinto.jpg', 'Contains: Sulfites')">
+            <div class="product-info"><h3>Tinto de Verano</h3><p>Bottle or on tap...</p></div><div class="product-price">€2.20</div>
+        </div>
+        <div class="product-card" onclick="abrirPopUp('Water & Soft Drinks', 'Small water (€1.20), Large water (€2.00), Soft drinks 33cl (€2.20), Sparkling water (€2.50), Red Bull (€2.90).', 'From €1.20', 'agua.jpg', 'No allergens')">
+            <div class="product-info"><h3>Water & Soft Drinks</h3><p>Soft drinks, water, energy drinks...</p></div><div class="product-price">View</div>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay" id="productoModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="cerrarPopUp()">✕</button>
+            <img src="" alt="Photo" class="modal-img" id="popImg">
+            <div class="modal-body">
+                <h2 class="modal-title" id="popTitle">Name</h2>
+                <p class="modal-desc" id="popDesc">Description</p>
+                <div class="modal-allergens" id="popAllergens">Allergens</div>
+                <div class="modal-price-bar" id="popPrice">€0.00</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirPopUp(titulo, descripcion, precio, imagen, alergenos) {
+            document.getElementById('popTitle').innerText = titulo; document.getElementById('popDesc').innerText = descripcion; document.getElementById('popPrice').innerText = precio;
+            var imgElement = document.getElementById('popImg');
+            if(imagen && imagen !== '') { imgElement.src = imagen; imgElement.style.display = 'block'; } else { imgElement.style.display = 'none'; }
+            document.getElementById('popAllergens').innerText = alergenos; document.getElementById('productoModal').style.display = 'flex';
+        }
+        function cerrarPopUp() { document.getElementById('productoModal').style.display = 'none'; }
+        var modal = document.getElementById('productoModal');
+        window.onclick = function(event) { if (event.target == modal) { cerrarPopUp(); } }
+    </script>
+</body>
+</html>
