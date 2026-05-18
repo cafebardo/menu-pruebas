@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Bardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #A6A6A6; /* Tu color de fondo */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .logo {
+            max-width: 220px; /* Tamaño ideal para que destaque tu logo vertical */
+            height: auto;
+            margin-bottom: 50px;
+            /* Al ser transparente, se fusionará perfecto con el fondo */
+        }
+        .menu-options {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #A6A6A6; /* Mismo fondo que la pantalla */
+            color: #FFC700; /* Letras en el amarillo que pediste */
+            text-decoration: none;
+            padding: 22px;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            
+            /* El contorno fluido: borde sutil y sombras suaves (neumorfismo) */
+            border: 1px solid rgba(255, 199, 0, 0.4);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15), -6px -6px 12px rgba(255, 255, 255, 0.3);
+            transition: all 0.2s ease;
+        }
+        /* Efecto al presionar el botón en el celular */
+        .box:active {
+            transform: scale(0.97);
+            box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 199, 0, 0.8);
+        }
+        .subtitle {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #FFC700;
+            opacity: 0.8;
+            margin-top: 6px;
+            letter-spacing: 1px;
+            text-transform: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Bardo.png" alt="Bardo Logo" class="logo">
+
+        <div class="menu-options">
+            <a href="menu_es.pdf" class="box" target="_blank">
+                Menú en Español
+                <span class="subtitle">Ver la carta</span>
+            </a>
+            
+            <a href="menu_en.pdf" class="box" target="_blank">
+                English Menu
+                <span class="subtitle">View the menu</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
