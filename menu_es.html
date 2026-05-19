@@ -18,11 +18,13 @@
         .nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.70rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         .nav-link:active, .nav-link:focus { color: #FFC700; }
 
-        .menu-container { padding: 15px; max-width: 600px; margin: 0 auto; }
+        .menu-container { padding: 15px; max-width: 700px; margin: 0 auto; }
         .category-title { scroll-margin-top: 170px; color: #FFC700; font-size: 1.2rem; margin: 35px 0 20px 0; text-transform: uppercase; letter-spacing: 3px; text-align: center; font-weight: 700; }
-        .sub-category { grid-column: span 2; color: #ffffff; text-align: center; font-size: 1rem; text-transform: uppercase; margin: 15px 0 5px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; letter-spacing: 2px; }
+        .sub-category { grid-column: 1 / -1; color: #ffffff; text-align: center; font-size: 1rem; text-transform: uppercase; margin: 15px 0 5px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; letter-spacing: 2px; }
         
+        /* Cuadrícula Inteligente: 2 columnas en móvil, 3 en pantallas más anchas */
         .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 500px) { .category-grid { grid-template-columns: repeat(3, 1fr); } }
         
         .product-card { background-color: #262626; border-radius: 12px; padding: 15px; display: flex; flex-direction: column; text-align: center; justify-content: space-between; cursor: pointer; transition: 0.2s; border: 1px solid rgba(255,255,255,0.05); }
         .product-card:active { transform: scale(0.96); background-color: #333; }
@@ -54,6 +56,7 @@
             <a href="#tostadas" class="nav-link">Tostadas</a>
             <a href="#hojaldres" class="nav-link">Hojaldres</a>
             <a href="#bowls" class="nav-link">Bowls</a>
+            <a href="#bolleria" class="nav-link">Bollería</a>
             <a href="#sandwiches" class="nav-link">Sándwiches</a>
             <a href="#smoothies" class="nav-link">Smoothies</a>
             <a href="#zumos" class="nav-link">Zumos</a>
@@ -150,7 +153,7 @@
             </div>
         </div>
 
-        <h2 id="bowls" class="category-title">Yogur Bowls y Bollería</h2>
+        <h2 id="bowls" class="category-title">Yogur Bowls</h2>
         <div class="category-grid">
             <div class="product-card" onclick="abrir('Bardo Nature', 'Base de yogur griego, granola, kiwi, fresa, arándanos, manzana y miel.', '5.00€', 'b_nature.jpg', 'Lácteos, Gluten, Frutos Secos')">
                 <div class="product-info"><h3>Bardo Nature</h3><p>Fruta fresca</p></div><div class="product-price">5.00€</div>
@@ -161,6 +164,10 @@
             <div class="product-card" onclick="abrir('Bardo Choco-Fruit', 'Yogur griego, copos de maíz sin azúcar, plátano, fresa y sirope de chocolate con avellanas.', '5.00€', 'b_choco.jpg', 'Lácteos, Frutos Secos')">
                 <div class="product-info"><h3>Bardo Choco</h3><p>Para golosos</p></div><div class="product-price">5.00€</div>
             </div>
+        </div>
+
+        <h2 id="bolleria" class="category-title">Bollería</h2>
+        <div class="category-grid">
             <div class="product-card" onclick="abrir('Croissant Natural', 'Masa de hojaldre y mantequilla.', '1.60€', 'c_natural.jpg', 'Gluten, Lácteos')">
                 <div class="product-info"><h3>Croissant Natural</h3><p>De mantequilla</p></div><div class="product-price">1.60€</div>
             </div>
@@ -177,23 +184,23 @@
 
         <h2 id="sandwiches" class="category-title">Sándwiches de Autor</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Sándwich vegetariano fresco y ligero preparado en pan artesanal. Sin cebolla, sin semillas y sin espinaca.', '6.50€', 's_huerta.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Huerta Arcoíris</h3><p>Fresco y ligero</p></div><div class="product-price">6.50€</div>
+            <div class="product-card" onclick="abrir('El Castizo', 'Base: Pan de barra rústica de masa madre. Ingredientes: Jamón Serrano, Queso semicurado fundido, Tomates secos en aceite y Espinaca baby.', '7.50€', 's_castizo.jpg', 'Gluten, Lácteos')">
+                <div class="product-info"><h3>El Castizo</h3><p>Jamón serrano y tomates secos</p></div><div class="product-price">7.50€</div>
             </div>
-            <div class="product-card" onclick="abrir('Dulce Azul', 'Una combinación atrevida con un contraste perfecto, coronado con el toque crujiente de almendras fritas.', '7.00€', 's_azul.jpg', 'Gluten, Lácteos, Frutos Secos')">
-                <div class="product-info"><h3>Dulce Azul</h3><p>Receta especial</p></div><div class="product-price">7.00€</div>
+            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Base: Pan de barra rústica de masa madre. Ingredientes: Hummus (clásico o de remolacha), nido de cintas de calabacín, zanahoria y pimientos del piquillo.', '6.50€', 's_huerta.jpg', 'Gluten, Sésamo')">
+                <div class="product-info"><h3>Huerta Arcoíris</h3><p>Hummus y vegetales frescos</p></div><div class="product-price">6.50€</div>
             </div>
-            <div class="product-card" onclick="abrir('El Castizo', 'Nuestra receta más tradicional con ingredientes de primera calidad para los amantes de los sabores clásicos.', '7.50€', 's_castizo.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>El Castizo</h3><p>Muy tradicional</p></div><div class="product-price">7.50€</div>
+            <div class="product-card" onclick="abrir('El Forastero', 'Base: Pan de barra rústica de masa madre. Ingredientes: Pastrami de ternera (o Roast Beef), Queso semicurado fundido, Pepinillos agridulces y Mostaza-Miel.', '7.50€', 's_forastero.jpg', 'Gluten, Lácteos, Mostaza')">
+                <div class="product-info"><h3>El Forastero</h3><p>Pastrami y mostaza-miel</p></div><div class="product-price">7.50€</div>
             </div>
-            <div class="product-card" onclick="abrir('El Forastero', 'Pollo asado, queso fundido, tomates confitados y cebolla caramelizada en pan rústico.', '7.50€', 's_forastero.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>El Forastero</h3><p>Toque caramelizado</p></div><div class="product-price">7.50€</div>
+            <div class="product-card" onclick="abrir('Bagel Nórdico', 'Base: Pan Bagel de sésamo. Ingredientes: Salmón ahumado, Crema de aguacate con lima, Queso crema, Espinaca baby y Cebolla morada encurtida.', '7.00€', 's_nordico.jpg', 'Gluten, Sésamo, Lácteos, Pescado')">
+                <div class="product-info"><h3>Bagel Nórdico</h3><p>Salmón ahumado y aguacate</p></div><div class="product-price">7.00€</div>
             </div>
-            <div class="product-card" onclick="abrir('Bagel Nórdico', 'Bagel tostado con salmón ahumado, queso crema, eneldo fresco y rúcula.', '7.00€', 's_nordico.jpg', 'Gluten, Lácteos, Pescado')">
-                <div class="product-info"><h3>Bagel Nórdico</h3><p>Salmón y queso</p></div><div class="product-price">7.00€</div>
+            <div class="product-card" onclick="abrir('Dulce Azul', 'Base: Pan de barra rústica de masa madre. Ingredientes: Lonchas de lacón, Pasta de queso azul, Queso semicurado fundido, Miel y Almendras fritas picadas.', '7.00€', 's_azul.jpg', 'Gluten, Lácteos, Frutos de Cáscara')">
+                <div class="product-info"><h3>Dulce Azul</h3><p>Queso azul, lacón y almendras</p></div><div class="product-price">7.00€</div>
             </div>
-            <div class="product-card" onclick="abrir('El de Siempre', 'Sándwich clásico en pan de molde artesanal con jamón dulce y queso suizo fundido.', '5.50€', 's_siempre.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>El de Siempre</h3><p>El clásico infalible</p></div><div class="product-price">5.50€</div>
+            <div class="product-card" onclick="abrir('El De Siempre', 'Base: Pan de barra rústica de masa madre. Ingredientes: Jamón cocido, Queso fundido, Rodajas de tomate natural y Lechuga fresca.', '5.50€', 's_siempre.jpg', 'Gluten, Lácteos')">
+                <div class="product-info"><h3>El De Siempre</h3><p>Jamón, queso, tomate y lechuga</p></div><div class="product-price">5.50€</div>
             </div>
         </div>
 
