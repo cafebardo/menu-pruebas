@@ -18,10 +18,13 @@
         .nav-link { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.70rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         .nav-link:active, .nav-link:focus { color: #FFC700; }
 
-        .menu-container { padding: 15px; max-width: 600px; margin: 0 auto; }
+        .menu-container { padding: 15px; max-width: 700px; margin: 0 auto; }
         .category-title { scroll-margin-top: 170px; color: #FFC700; font-size: 1.2rem; margin: 35px 0 20px 0; text-transform: uppercase; letter-spacing: 3px; text-align: center; font-weight: 700; }
+        .sub-category { grid-column: 1 / -1; color: #ffffff; text-align: center; font-size: 1rem; text-transform: uppercase; margin: 15px 0 5px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; letter-spacing: 2px; }
         
+        /* Smart Grid: 2 columns mobile, 3 columns wider screens */
         .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        @media (min-width: 500px) { .category-grid { grid-template-columns: repeat(3, 1fr); } }
         
         .product-card { background-color: #262626; border-radius: 12px; padding: 15px; display: flex; flex-direction: column; text-align: center; justify-content: space-between; cursor: pointer; transition: 0.2s; border: 1px solid rgba(255,255,255,0.05); }
         .product-card:active { transform: scale(0.96); background-color: #333; }
@@ -50,7 +53,6 @@
         </div>
         <div class="nav-bar">
             <a href="#coffee" class="nav-link">Coffee</a>
-            <a href="#iced" class="nav-link">Iced Coffee</a>
             <a href="#toasts" class="nav-link">Toasts</a>
             <a href="#pastries" class="nav-link">Pastries</a>
             <a href="#bowls" class="nav-link">Bowls</a>
@@ -58,6 +60,9 @@
             <a href="#sandwiches" class="nav-link">Sandwiches</a>
             <a href="#smoothies" class="nav-link">Smoothies</a>
             <a href="#juices" class="nav-link">Juices</a>
+            <a href="#shakes" class="nav-link">Shakes</a>
+            <a href="#milkshakes" class="nav-link">Milkshakes</a>
+            <a href="#desserts" class="nav-link">Desserts</a>
             <a href="#drinks" class="nav-link">Drinks</a>
         </div>
     </div>
@@ -90,10 +95,6 @@
             <div class="product-card" onclick="abrir('Hot Chocolate', 'Sweet cocoa drink with milk.', '€1.90', 'colacao.jpg', 'Dairy')">
                 <div class="product-info"><h3>Hot Chocolate</h3><p>Classic cocoa</p></div><div class="product-price">€1.90</div>
             </div>
-        </div>
-
-        <h2 id="iced" class="category-title">Iced Coffee</h2>
-        <div class="category-grid">
             <div class="product-card" onclick="abrir('Iced Latte', 'Cold coffee with ice and milk.', 'Reg (350cc): €2.80<br>Lrg (500cc): €3.50', 'iced_latte.jpg', 'Dairy')">
                 <div class="product-info"><h3>Iced Latte</h3><p>Refreshing</p></div><div class="product-price">€2.80 - €3.50</div>
             </div>
@@ -174,7 +175,7 @@
                 <div class="product-info"><h3>Natural Croissant</h3><p>Butter classic</p></div><div class="product-price">€1.60</div>
             </div>
             <div class="product-card" onclick="abrir('Mixed Croissant', 'Toasted and filled with cooked ham and cheese.', '€2.70', 'c_mixto.jpg', 'Gluten, Dairy')">
-                <div class="product-info"><h3>Mixed Croissant</h3><p>Warm</p></div><div class="product-price">€2.70</div>
+                <div class="product-info"><h3>Mixed Croissant</h3><p>Warm & melty</p></div><div class="product-price">€2.70</div>
             </div>
             <div class="product-card" onclick="abrir('Serrano Croissant', 'Toasted and filled with Serrano ham and cheese.', '€2.90', 'c_serrano.jpg', 'Gluten, Dairy')">
                 <div class="product-info"><h3>Serrano Croissant</h3><p>Iberian flavor</p></div><div class="product-price">€2.90</div>
@@ -186,14 +187,23 @@
 
         <h2 id="sandwiches" class="category-title">Signature Sandwiches</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Fresh vegetarian sandwich on rustic bread. No onion, no seeds, no spinach.', '€6.50', 's_huerta.jpg', 'Gluten, Dairy')">
-                <div class="product-info"><h3>Rainbow Garden</h3><p>Fresh & light</p></div><div class="product-price">€6.50</div>
+            <div class="product-card" onclick="abrir('El Castizo', 'Base: Rustic sourdough bread. Ingredients: Serrano ham, melted semi-cured cheese, sun-dried tomatoes, and baby spinach.', '€7.50', 's_castizo.jpg', 'Gluten, Dairy')">
+                <div class="product-info"><h3>El Castizo</h3><p>Serrano & sun-dried tomato</p></div><div class="product-price">€7.50</div>
             </div>
-            <div class="product-card" onclick="abrir('Dulce Azul', 'A daring combination with a perfect contrast, topped with crunchy fried almonds.', '€7.00', 's_azul.jpg', 'Gluten, Dairy, Nuts')">
-                <div class="product-info"><h3>Sweet Blue</h3><p>Special recipe</p></div><div class="product-price">€7.00</div>
+            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Base: Rustic sourdough bread. Ingredients: Hummus, zucchini ribbons, carrot, and piquillo peppers.', '€6.50', 's_huerta.jpg', 'Gluten, Sesame')">
+                <div class="product-info"><h3>Rainbow Garden</h3><p>Hummus & fresh veg</p></div><div class="product-price">€6.50</div>
             </div>
-            <div class="product-card" onclick="abrir('El Castizo', 'Our most traditional recipe with premium ingredients for lovers of classic flavors.', '€7.50', 's_castizo.jpg', 'Gluten, Dairy')">
-                <div class="product-info"><h3>El Castizo</h3><p>Very traditional</p></div><div class="product-price">€7.50</div>
+            <div class="product-card" onclick="abrir('El Forastero', 'Base: Rustic sourdough bread. Ingredients: Pastrami, melted semi-cured cheese, pickles, and honey-mustard.', '€7.50', 's_forastero.jpg', 'Gluten, Dairy, Mustard')">
+                <div class="product-info"><h3>El Forastero</h3><p>Pastrami & honey-mustard</p></div><div class="product-price">€7.50</div>
+            </div>
+            <div class="product-card" onclick="abrir('Nordic Bagel', 'Base: Sesame bagel. Ingredients: Smoked salmon, avocado cream, cream cheese, spinach, and red onion.', '€7.00', 's_nordico.jpg', 'Gluten, Sesame, Fish, Dairy')">
+                <div class="product-info"><h3>Nordic Bagel</h3><p>Smoked salmon & avocado</p></div><div class="product-price">€7.00</div>
+            </div>
+            <div class="product-card" onclick="abrir('Dulce Azul', 'Base: Rustic sourdough bread. Ingredients: Lacón (pork), blue cheese, semi-cured cheese, honey, and fried almonds.', '€7.00', 's_azul.jpg', 'Gluten, Dairy, Nuts')">
+                <div class="product-info"><h3>Sweet Blue</h3><p>Blue cheese & almonds</p></div><div class="product-price">€7.00</div>
+            </div>
+            <div class="product-card" onclick="abrir('The Usual', 'Base: Rustic sourdough bread. Ingredients: Cooked ham, melted cheese, fresh tomato, and lettuce.', '€5.50', 's_siempre.jpg', 'Gluten, Dairy')">
+                <div class="product-info"><h3>The Usual</h3><p>Ham, cheese & tomato</p></div><div class="product-price">€5.50</div>
             </div>
         </div>
 
@@ -216,7 +226,7 @@
             </div>
         </div>
 
-        <h2 id="juices" class="category-title">Juices & Shakes</h2>
+        <h2 id="juices" class="category-title">Natural Juices</h2>
         <div class="category-grid">
             <div class="product-card" onclick="abrir('Detox Juice', 'Cucumber, celery, lemon, apple, and ginger.', 'Ask for price', 'z_detox.jpg', 'Celery')">
                 <div class="product-info"><h3>Detox</h3><p>With ginger</p></div><div class="product-price">View</div>
@@ -236,11 +246,15 @@
             <div class="product-card" onclick="abrir('Tropical Juice', 'Pineapple, spinach, and apple.', 'Ask for price', 'z_tropical.jpg', 'No allergens')">
                 <div class="product-info"><h3>Tropical</h3><p>Green & healthy</p></div><div class="product-price">View</div>
             </div>
+        </div>
+
+        <h2 id="shakes" class="category-title">Fruit Shakes</h2>
+        <div class="category-grid">
             <div class="product-card" onclick="abrir('Banana Shake', 'Natural fruit, milk, and ice.', 'Ask for price', 'b_platano.jpg', 'Dairy')">
                 <div class="product-info"><h3>Banana Shake</h3><p>Classic</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Strawberry Shake', 'Natural fruit, milk, and ice.', 'Ask for price', 'b_fresa.jpg', 'Dairy')">
-                <div class="product-info"><h3>Strawberry Shake</h3><p>Classic</p></div><div class="product-price">View</div>
+                <div class="product-info"><h3>Strawberry Shake</h3><p>Refreshing</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Strawberry & Banana', 'Natural fruit, milk, and ice.', 'Ask for price', 'b_fresa_platano.jpg', 'Dairy')">
                 <div class="product-info"><h3>Strawberry & Banana</h3><p>Mixed</p></div><div class="product-price">View</div>
@@ -248,19 +262,34 @@
             <div class="product-card" onclick="abrir('Banana & Cocoa', 'Natural fruit, milk, cocoa, and ice.', 'Ask for price', 'b_cacao.jpg', 'Dairy')">
                 <div class="product-info"><h3>Banana & Cocoa</h3><p>With chocolate</p></div><div class="product-price">View</div>
             </div>
+        </div>
+
+        <h2 id="milkshakes" class="category-title">Premium Milkshakes</h2>
+        <div class="category-grid">
             <div class="product-card" onclick="abrir('Chocolate Milkshake', 'Natural fruit, milk, chocolate ice cream, hazelnut syrup, and whipped cream.', 'Ask for price', 'm_choco.jpg', 'Dairy, Nuts')">
                 <div class="product-info"><h3>Choco Milkshake</h3><p>With cream</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Strawberry Milkshake', 'Natural fruit, milk, strawberry ice cream, syrup, and whipped cream.', 'Ask for price', 'm_fresa.jpg', 'Dairy')">
-                <div class="product-info"><h3>Strawberry Milkshake</h3><p>With cream</p></div><div class="product-price">View</div>
+                <div class="product-info"><h3>Straw Milkshake</h3><p>With cream</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Oreo Milkshake', 'Cream ice cream, Oreo cookies, chocolate syrup, and whipped cream.', 'Ask for price', 'm_oreo.jpg', 'Gluten, Dairy, Soy')">
                 <div class="product-info"><h3>Oreo Milkshake</h3><p>With cream</p></div><div class="product-price">View</div>
             </div>
         </div>
 
+        <h2 id="desserts" class="category-title">Desserts</h2>
+        <div class="category-grid">
+            <div class="product-card" onclick="abrir('Tiramisu', 'Delicious homemade coffee, cocoa, and mascarpone dessert.', '€4.00', 'tiramisu.jpg', 'Gluten, Dairy, Eggs')">
+                <div class="product-info"><h3>Tiramisu</h3><p>Italian classic</p></div><div class="product-price">€4.00</div>
+            </div>
+            <div class="product-card" onclick="abrir('Fruit Mix Cup', 'Selection of fresh chopped seasonal fruits.', '€3.00', 'mix_fruta.jpg', 'No allergens')">
+                <div class="product-info"><h3>Fruit Mix Cup</h3><p>Fresh & natural</p></div><div class="product-price">€3.00</div>
+            </div>
+        </div>
+
         <h2 id="drinks" class="category-title">Drinks</h2>
         <div class="category-grid">
+            <h3 class="sub-category">Alcoholic</h3>
             <div class="product-card" onclick="abrir('Bottled Beer', '25cl. Ask for available varieties.', '€1.90', 'cerveza_bot.jpg', 'Gluten')">
                 <div class="product-info"><h3>Beer 25cl</h3><p>Small bottle</p></div><div class="product-price">€1.90</div>
             </div>
@@ -279,6 +308,8 @@
             <div class="product-card" onclick="abrir('Tinto de Verano Draft', 'Ladron de Verano on tap.', '€3.50', 'tinto_grifo.jpg', 'Sulfites')">
                 <div class="product-info"><h3>Tinto Verano</h3><p>On Tap</p></div><div class="product-price">€3.50</div>
             </div>
+
+            <h3 class="sub-category">Non-Alcoholic</h3>
             <div class="product-card" onclick="abrir('Soft Drinks', '33cl Can.', '€2.20', 'refresco.jpg', 'No allergens')">
                 <div class="product-info"><h3>Soft Drinks</h3><p>33cl Can</p></div><div class="product-price">€2.20</div>
             </div>
