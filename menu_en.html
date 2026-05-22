@@ -22,7 +22,6 @@
         .category-title { scroll-margin-top: 170px; color: #FFC700; font-size: 1.2rem; margin: 35px 0 20px 0; text-transform: uppercase; letter-spacing: 3px; text-align: center; font-weight: 700; }
         .sub-category { grid-column: 1 / -1; color: #ffffff; text-align: center; font-size: 1rem; text-transform: uppercase; margin: 15px 0 5px 0; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 5px; letter-spacing: 2px; }
         
-        /* Smart Grid: 2 columns mobile, 3 columns wider screens */
         .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
         @media (min-width: 500px) { .category-grid { grid-template-columns: repeat(3, 1fr); } }
         
@@ -187,23 +186,20 @@
 
         <h2 id="sandwiches" class="category-title">Signature Sandwiches</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('El Castizo', 'Base: Rustic sourdough bread. Ingredients: Serrano ham, melted semi-cured cheese, sun-dried tomatoes, and baby spinach.', '€7.50', 's_castizo.jpg', 'Gluten, Dairy')">
+            <div class="product-card" onclick="abrir('El Castizo', 'Base: Rustic sourdough bread. Ingredients: Serrano ham, melted semi-cured cheese, sun-dried tomatoes in oil, and baby spinach.', '€7.50', 's_castizo.jpg', 'Gluten, Dairy')">
                 <div class="product-info"><h3>El Castizo</h3><p>Serrano & sun-dried tomato</p></div><div class="product-price">€7.50</div>
             </div>
-            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Base: Rustic sourdough bread. Ingredients: Hummus, zucchini ribbons, carrot, and piquillo peppers.', '€6.50', 's_huerta.jpg', 'Gluten, Sesame')">
+            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Base: Rustic sourdough bread. Ingredients: Hummus (classic or beetroot), fresh nest of zucchini ribbons, carrot, and piquillo peppers.', '€6.50', 's_huerta.jpg', 'Gluten, Sesame')">
                 <div class="product-info"><h3>Rainbow Garden</h3><p>Hummus & fresh veg</p></div><div class="product-price">€6.50</div>
             </div>
-            <div class="product-card" onclick="abrir('El Forastero', 'Base: Rustic sourdough bread. Ingredients: Pastrami, melted semi-cured cheese, pickles, and honey-mustard.', '€7.50', 's_forastero.jpg', 'Gluten, Dairy, Mustard')">
+            <div class="product-card" onclick="abrir('El Forastero', 'Base: Rustic sourdough bread. Ingredients: Beef pastrami (or Roast Beef), melted semi-cured cheese, sweet pickles, and honey-mustard.', '€7.50', 's_forastero.jpg', 'Gluten, Dairy, Mustard')">
                 <div class="product-info"><h3>El Forastero</h3><p>Pastrami & honey-mustard</p></div><div class="product-price">€7.50</div>
             </div>
-            <div class="product-card" onclick="abrir('Nordic Bagel', 'Base: Sesame bagel. Ingredients: Smoked salmon, avocado cream, cream cheese, spinach, and red onion.', '€7.00', 's_nordico.jpg', 'Gluten, Sesame, Fish, Dairy')">
+            <div class="product-card" onclick="abrir('Nordic Bagel', 'Base: Sesame bagel. Ingredients: Smoked salmon, avocado cream with lime, cream cheese, seasoned baby spinach, and pickled red onion.', '€7.00', 's_nordico.jpg', 'Gluten, Sesame, Dairy, Fish')">
                 <div class="product-info"><h3>Nordic Bagel</h3><p>Smoked salmon & avocado</p></div><div class="product-price">€7.00</div>
             </div>
-            <div class="product-card" onclick="abrir('Dulce Azul', 'Base: Rustic sourdough bread. Ingredients: Lacón (pork), blue cheese, semi-cured cheese, honey, and fried almonds.', '€7.00', 's_azul.jpg', 'Gluten, Dairy, Nuts')">
-                <div class="product-info"><h3>Sweet Blue</h3><p>Blue cheese & almonds</p></div><div class="product-price">€7.00</div>
-            </div>
-            <div class="product-card" onclick="abrir('The Usual', 'Base: Rustic sourdough bread. Ingredients: Cooked ham, melted cheese, fresh tomato, and lettuce.', '€5.50', 's_siempre.jpg', 'Gluten, Dairy')">
-                <div class="product-info"><h3>The Usual</h3><p>Ham, cheese & tomato</p></div><div class="product-price">€5.50</div>
+            <div class="product-card" onclick="abrir('The Usual', 'Base: Rustic sourdough bread. Ingredients: Cooked ham, melted cheese, fresh tomato slices, and fresh lettuce.', '€5.50', 's_siempre.jpg', 'Gluten, Dairy')">
+                <div class="product-info"><h3>The Usual</h3><p>Ham, cheese, tomato & lettuce</p></div><div class="product-price">€5.50</div>
             </div>
         </div>
 
@@ -257,7 +253,7 @@
                 <div class="product-info"><h3>Strawberry Shake</h3><p>Refreshing</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Strawberry & Banana', 'Natural fruit, milk, and ice.', 'Ask for price', 'b_fresa_platano.jpg', 'Dairy')">
-                <div class="product-info"><h3>Strawberry & Banana</h3><p>Mixed</p></div><div class="product-price">View</div>
+                <div class="product-info"><h3>Straw & Banana</h3><p>Mixed</p></div><div class="product-price">View</div>
             </div>
             <div class="product-card" onclick="abrir('Banana & Cocoa', 'Natural fruit, milk, cocoa, and ice.', 'Ask for price', 'b_cacao.jpg', 'Dairy')">
                 <div class="product-info"><h3>Banana & Cocoa</h3><p>With chocolate</p></div><div class="product-price">View</div>
