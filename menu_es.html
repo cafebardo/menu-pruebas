@@ -51,7 +51,6 @@
             <a href="#sandwiches" class="nav-link">Sándwiches</a>
             <a href="#smoothies" class="nav-link">Smoothies</a>
             <a href="#zumos" class="nav-link">Zumos</a>
-            <a href="#batidos" class="nav-link">Batidos</a>
             <a href="#milkshakes" class="nav-link">Milkshakes</a>
             <a href="#postres" class="nav-link">Postres</a>
             <a href="#bebidas" class="nav-link">Bebidas</a>
@@ -61,207 +60,141 @@
         <!-- CAFÉS -->
         <h2 id="cafes" class="category-title">Café e Infusiones</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Infusión', 'Camomila / Rooibos / Verde / Negro.', '1.50€', 'infusion.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Infusión</h3></div><div class="product-price">1.50€</div></div>
-            <div class="product-card" onclick="abrir('Espresso', 'Un shot de café intenso.', '1.50€', 'espresso.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Espresso</h3></div><div class="product-price">1.50€</div></div>
-            <div class="product-card" onclick="abrir('Solo Largo', 'Café solo con más extracción de agua.', '1.50€', 'solo_largo.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Solo Largo</h3></div><div class="product-price">1.50€</div></div>
-            <div class="product-card" onclick="abrir('Cortado', 'Espresso con un toque de leche.', '1.70€', 'cortado.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Cortado</h3></div><div class="product-price">1.70€</div></div>
-            <div class="product-card" onclick="abrir('Americano', 'Espresso diluido en agua caliente.', '1.80€', 'americano.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Americano</h3></div><div class="product-price">1.80€</div></div>
-            <div class="product-card" onclick="abrir('Café con Leche', 'Espresso con leche texturizada.', '1.85€', 'cafe_leche.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Café Leche</h3></div><div class="product-price">1.85€</div></div>
-            <div class="product-card" onclick="abrir('Capuccino', 'Espresso con abundante crema de leche.', '1.90€', 'capuccino.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Capuccino</h3></div><div class="product-price">1.90€</div></div>
-            <div class="product-card" onclick="abrir('Matcha Latte', 'Té matcha con leche.', '3.60€', 'matcha.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Matcha Latte</h3></div><div class="product-price">3.60€</div></div>
-            <div class="product-card" onclick="abrir('Colacao', 'Bebida de cacao dulce con leche.', '1.90€', 'colacao.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Colacao</h3></div><div class="product-price">1.90€</div></div>
-            <div class="product-card" onclick="abrir('Iced Latte', 'Café con leche frío.', 'Reg: 2.80€<br>Gde: 3.50€', 'iced_latte.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Iced Latte</h3></div><div class="product-price">2.80€ - 3.50€</div></div>
-            <div class="product-card" onclick="abrir('Iced Matcha Latte', 'Matcha frío con leche.', 'Reg: 3.90€<br>Gde: 4.90€', 'iced_matcha.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Iced Matcha</h3></div><div class="product-price">3.90€ - 4.90€</div></div>
-            <div class="product-card" onclick="abrir('Frapuccino', 'Café frappé.', 'Reg: 3.90€<br>Gde: 4.90€', 'frapu.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Frapuccino</h3></div><div class="product-price">3.90€ - 4.90€</div></div>
+            <div class="product-card" onclick="abrir('Infusión', 'Camomila / Rooibos / Verde / Negro.', '1.50€', 'infusion.jpg', 'Sin alérgenos')"><h3>Infusión</h3><div class="product-price">1.50€</div></div>
+            <div class="product-card" onclick="abrir('Espresso', 'Un shot de café intenso.', '1.50€', 'espresso.jpg', 'Sin alérgenos')"><h3>Espresso</h3><div class="product-price">1.50€</div></div>
+            <div class="product-card" onclick="abrir('Solo Largo', 'Café solo con más extracción de agua.', '1.50€', 'solo_largo.jpg', 'Sin alérgenos')"><h3>Solo Largo</h3><div class="product-price">1.50€</div></div>
+            <div class="product-card" onclick="abrir('Cortado', 'Espresso con un toque de leche.', '1.70€', 'cortado.jpg', 'Lácteos')"><h3>Cortado</h3><div class="product-price">1.70€</div></div>
+            <div class="product-card" onclick="abrir('Americano', 'Espresso diluido en agua caliente.', '1.80€', 'americano.jpg', 'Sin alérgenos')"><h3>Americano</h3><div class="product-price">1.80€</div></div>
+            <div class="product-card" onclick="abrir('Café con Leche', 'Espresso con leche texturizada.', '1.85€', 'cafe_leche.jpg', 'Lácteos')"><h3>Café Leche</h3><div class="product-price">1.85€</div></div>
+            <div class="product-card" onclick="abrir('Capuccino', 'Espresso con abundante crema de leche.', '1.90€', 'capuccino.jpg', 'Lácteos')"><h3>Capuccino</h3><div class="product-price">1.90€</div></div>
+            <div class="product-card" onclick="abrir('Matcha Latte', 'Té matcha con leche.', '3.60€', 'matcha.jpg', 'Lácteos')"><h3>Matcha Latte</h3><div class="product-price">3.60€</div></div>
+            <div class="product-card" onclick="abrir('Colacao', 'Bebida de cacao dulce con leche.', '1.90€', 'colacao.jpg', 'Lácteos')"><h3>Colacao</h3><div class="product-price">1.90€</div></div>
+            <div class="product-card" onclick="abrir('Iced Latte', 'Café con leche frío.', 'Regular (350cc): 2.80€<br>Grande (500cc): 3.50€', 'iced_latte.jpg', 'Lácteos')"><h3>Iced Latte</h3><div class="product-price">2.80€ - 3.50€</div></div>
+            <div class="product-card" onclick="abrir('Iced Matcha Latte', 'Matcha frío con leche.', 'Regular (350cc): 3.90€<br>Grande (500cc): 4.90€', 'iced_matcha.jpg', 'Lácteos')"><h3>Iced Matcha</h3><div class="product-price">3.90€ - 4.90€</div></div>
+            <div class="product-card" onclick="abrir('Frapuccino', 'Café frappé.', 'Regular (350cc): 3.90€<br>Grande (500cc): 4.90€', 'frapu.jpg', 'Lácteos')"><h3>Frapuccino</h3><div class="product-price">3.90€ - 4.90€</div></div>
         </div>
-        
+
         <!-- TOSTADAS -->
         <h2 id="tostadas" class="category-title">Tostadas de Masa Madre</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Aceite', 'Pan rústico con aceite de oliva.', '2.00€', 't_aceite.jpg', 'Gluten')">
-                <div class="product-info"><h3>Aceite</h3></div><div class="product-price">2.00€</div></div>
-            <div class="product-card" onclick="abrir('Tomate', 'Pan rústico con tomate.', '2.00€', 't_tomate.jpg', 'Gluten')">
-                <div class="product-info"><h3>Tomate</h3></div><div class="product-price">2.00€</div></div>
-            <div class="product-card" onclick="abrir('Mant. y Mermelada', 'Pan rústico, mantequilla, mermelada.', '2.50€', 't_mermelada.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Mant. y Mermelada</h3></div><div class="product-price">2.50€</div></div>
-            <div class="product-card" onclick="abrir('Queso y Mermelada', 'Pan rústico, queso, mermelada.', '2.50€', 't_queso_mer.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Queso y Mermelada</h3></div><div class="product-price">2.50€</div></div>
-            <div class="product-card" onclick="abrir('Tomate y Queso', 'Pan rústico, tomate, queso.', '3.00€', 't_tomate_queso.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Tomate y Queso</h3></div><div class="product-price">3.00€</div></div>
-            <div class="product-card" onclick="abrir('Tomate y J. Cocido', 'Pan rústico, tomate, jamón.', '3.50€', 't_tomate_cocido.jpg', 'Gluten')">
-                <div class="product-info"><h3>Tomate y J. Cocido</h3></div><div class="product-price">3.50€</div></div>
-            <div class="product-card" onclick="abrir('Tomate y Serrano', 'Pan rústico, tomate, serrano.', '3.50€', 't_tomate_serrano.jpg', 'Gluten')">
-                <div class="product-info"><h3>Tomate y Serrano</h3></div><div class="product-price">3.50€</div></div>
-            <div class="product-card" onclick="abrir('J. Cocido y Queso', 'Pan rústico, jamón, queso.', '4.00€', 't_mixta.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>J. Cocido y Queso</h3></div><div class="product-price">4.00€</div></div>
-            <div class="product-card" onclick="abrir('Serrano y Queso', 'Pan rústico, serrano, queso.', '4.00€', 't_serrano_queso.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Serrano y Queso</h3></div><div class="product-price">4.00€</div></div>
-            <div class="product-card" onclick="abrir('Completa Cocido', 'Tomate, j. cocido, queso.', '4.50€', 't_completa_cocido.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Completa Cocido</h3></div><div class="product-price">4.50€</div></div>
-            <div class="product-card" onclick="abrir('Completa Serrano', 'Tomate, serrano, queso.', '4.50€', 't_completa_serrano.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Completa Serrano</h3></div><div class="product-price">4.50€</div></div>
+            <div class="product-card" onclick="abrir('Aceite', 'Pan barra rústico de masa madre con aceite de oliva.', '2.00€', 't_aceite.jpg', 'Gluten')"><h3>Aceite</h3><div class="product-price">2.00€</div></div>
+            <div class="product-card" onclick="abrir('Tomate', 'Pan barra rústico con tomate triturado.', '2.00€', 't_tomate.jpg', 'Gluten')"><h3>Tomate</h3><div class="product-price">2.00€</div></div>
+            <div class="product-card" onclick="abrir('Mant. y Mermelada', 'Pan barra rústico con mantequilla y mermelada.', '2.50€', 't_mermelada.jpg', 'Gluten, Lácteos')"><h3>Mant. y Mermelada</h3><div class="product-price">2.50€</div></div>
+            <div class="product-card" onclick="abrir('Queso y Mermelada', 'Pan rústico con queso untable y mermelada.', '2.50€', 't_queso_mer.jpg', 'Gluten, Lácteos')"><h3>Queso y Mermelada</h3><div class="product-price">2.50€</div></div>
+            <div class="product-card" onclick="abrir('Tomate y Queso', 'Pan rústico con tomate y queso semicurado.', '3.00€', 't_tomate_queso.jpg', 'Gluten, Lácteos')"><h3>Tomate y Queso</h3><div class="product-price">3.00€</div></div>
+            <div class="product-card" onclick="abrir('Tomate y J. Cocido', 'Pan rústico con tomate y jamón cocido.', '3.50€', 't_tomate_cocido.jpg', 'Gluten')"><h3>Tomate y J. Cocido</h3><div class="product-price">3.50€</div></div>
+            <div class="product-card" onclick="abrir('Tomate y Serrano', 'Pan rústico con tomate y jamón serrano.', '3.50€', 't_tomate_serrano.jpg', 'Gluten')"><h3>Tomate y Serrano</h3><div class="product-price">3.50€</div></div>
+            <div class="product-card" onclick="abrir('J. Cocido y Queso', 'Pan rústico con jamón cocido y queso semicurado.', '4.00€', 't_mixta.jpg', 'Gluten, Lácteos')"><h3>J. Cocido y Queso</h3><div class="product-price">4.00€</div></div>
+            <div class="product-card" onclick="abrir('Serrano y Queso', 'Pan rústico con jamón serrano y queso.', '4.00€', 't_serrano_queso.jpg', 'Gluten, Lácteos')"><h3>Serrano y Queso</h3><div class="product-price">4.00€</div></div>
+            <div class="product-card" onclick="abrir('Completa Cocido', 'Tomate, j. cocido, queso.', '4.50€', 't_completa_cocido.jpg', 'Gluten, Lácteos')"><h3>Completa Cocido</h3><div class="product-price">4.50€</div></div>
+            <div class="product-card" onclick="abrir('Completa Serrano', 'Tomate, serrano, queso.', '4.50€', 't_completa_serrano.jpg', 'Gluten, Lácteos')"><h3>Completa Serrano</h3><div class="product-price">4.50€</div></div>
         </div>
 
         <!-- HOJALDRES -->
         <h2 id="hojaldres" class="category-title">Cestas de Hojaldre</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Jamón y Queso', 'Jamón cocido, queso emmental.', '2.50€', 'h_jamon.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Jamón y Queso</h3></div><div class="product-price">2.50€</div></div>
-            <div class="product-card" onclick="abrir('Ricotta y Espinaca', 'Espinaca, ricotta, bechamel, nuez, huevo.', '2.80€', 'h_ricotta.jpg', 'Gluten, Lácteos, Huevos')">
-                <div class="product-info"><h3>Ricotta y Espinaca</h3></div><div class="product-price">2.80€</div></div>
-            <div class="product-card" onclick="abrir('Queso de Cabra', 'Queso de cabra, miel y nueces.', '2.80€', 'h_cabra.jpg', 'Gluten, Lácteos, Frutos Secos')">
-                <div class="product-info"><h3>Queso de Cabra</h3></div><div class="product-price">2.80€</div></div>
+            <div class="product-card" onclick="abrir('Jamón y Queso', 'Jamón cocido, queso emmental.', '2.50€', 'h_jamon.jpg', 'Gluten, Lácteos')"><h3>Jamón y Queso</h3><div class="product-price">2.50€</div></div>
+            <div class="product-card" onclick="abrir('Ricotta y Espinaca', 'Espinaca, ricotta, bechamel, nuez, huevo.', '2.80€', 'h_ricotta.jpg', 'Gluten, Lácteos, Huevos')"><h3>Ricotta y Espinaca</h3><div class="product-price">2.80€</div></div>
+            <div class="product-card" onclick="abrir('Pollo y Puerro', 'Pollo troceado, puerro y queso emmental.', '2.80€', 'h_pollo.jpg', 'Gluten, Lácteos')"><h3>Pollo y Puerro</h3><div class="product-price">2.80€</div></div>
+            <div class="product-card" onclick="abrir('Queso de Cabra', 'Queso de cabra, miel y nueces.', '2.80€', 'h_cabra.jpg', 'Gluten, Lácteos, Frutos Secos')"><h3>Queso de Cabra</h3><div class="product-price">2.80€</div></div>
         </div>
 
         <!-- BOWLS -->
         <h2 id="bowls" class="category-title">Yogur Bowls</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Bardo Nature', 'Yogur griego, granola, kiwi, fresa, miel.', '5.00€', 'b_nature.jpg', 'Lácteos, Gluten, Frutos Secos')">
-                <div class="product-info"><h3>Bardo Nature</h3></div><div class="product-price">5.00€</div></div>
-            <div class="product-card" onclick="abrir('Bardo Tropical', 'Yogur griego, frutas, coco, leche cond./dulce.', '5.00€', 'b_tropical.jpg', 'Lácteos, Gluten')">
-                <div class="product-info"><h3>Bardo Tropical</h3></div><div class="product-price">5.00€</div></div>
-            <div class="product-card" onclick="abrir('Bardo Choco-Fruit', 'Yogur griego, cornflakes, banana, fresa, choco.', '5.00€', 'b_choco.jpg', 'Lácteos, Frutos Secos')">
-                <div class="product-info"><h3>Bardo Choco</h3></div><div class="product-price">5.00€</div></div>
+            <div class="product-card" onclick="abrir('Bardo Nature', 'Yogur griego, granola, kiwi, fresa, arándanos, manzana y miel.', '5.00€', 'b_nature.jpg', 'Lácteos, Gluten, Frutos Secos')"><h3>Bardo Nature</h3><div class="product-price">5.00€</div></div>
+            <div class="product-card" onclick="abrir('Bardo Tropical', 'Yogur griego, frutas, coco, leche cond./dulce.', '5.00€', 'b_tropical.jpg', 'Lácteos, Gluten')"><h3>Bardo Tropical</h3><div class="product-price">5.00€</div></div>
+            <div class="product-card" onclick="abrir('Bardo Choco-Fruit', 'Yogur griego, cornflakes, banana, fresa, sirope de chocolate.', '5.00€', 'b_choco.jpg', 'Lácteos, Frutos Secos')"><h3>Bardo Choco</h3><div class="product-price">5.00€</div></div>
         </div>
 
         <!-- BOLLERÍA -->
         <h2 id="bolleria" class="category-title">Bollería</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Croissant Natural', 'Mantequilla.', '1.60€', 'c_natural.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Natural</h3></div><div class="product-price">1.60€</div></div>
-            <div class="product-card" onclick="abrir('Croissant Mixto', 'Jamón cocido y queso.', '2.70€', 'c_mixto.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Mixto</h3></div><div class="product-price">2.70€</div></div>
-            <div class="product-card" onclick="abrir('Croissant Serrano', 'Serrano y queso.', '2.90€', 'c_serrano.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>Serrano</h3></div><div class="product-price">2.90€</div></div>
-            <div class="product-card" onclick="abrir('Croissant Dulce', 'Choco o dulce leche.', '2.60€', 'c_dulce.jpg', 'Gluten, Lácteos, Soja')">
-                <div class="product-info"><h3>Dulce</h3></div><div class="product-price">2.60€</div></div>
+            <div class="product-card" onclick="abrir('Croissant Natural', 'Masa de hojaldre y mantequilla.', '1.60€', 'c_natural.jpg', 'Gluten, Lácteos')"><h3>Natural</h3><div class="product-price">1.60€</div></div>
+            <div class="product-card" onclick="abrir('Croissant Mixto', 'Jamón cocido y queso.', '3.50€', 'c_mixto.jpg', 'Gluten, Lácteos')"><h3>Mixto</h3><div class="product-price">3.50€</div></div>
+            <div class="product-card" onclick="abrir('Croissant Serrano', 'Jamón serrano y queso.', '3.90€', 'c_serrano.jpg', 'Gluten, Lácteos')"><h3>Serrano</h3><div class="product-price">3.90€</div></div>
+            <div class="product-card" onclick="abrir('Croissant Dulce', 'Chocolate o dulce de leche.', '2.60€', 'c_dulce.jpg', 'Gluten, Lácteos, Soja')"><h3>Dulce</h3><div class="product-price">2.60€</div></div>
+            <div class="product-card" onclick="abrir('Croissant Gourmet', 'Jamón cocido o serrano, queso semicurado, espinaca y tomates secos.', '4.50€', 'c_gourmet.jpg', 'Gluten, Lácteos')"><h3>Gourmet</h3><div class="product-price">4.50€</div></div>
         </div>
 
         <!-- SÁNDWICHES -->
         <h2 id="sandwiches" class="category-title">Sándwiches de Autor</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('El Castizo', 'Jamón Serrano, Queso semicurado fundido, Tomates secos en aceite y Espinaca baby.', '7.50€', 's_castizo.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>El Castizo</h3></div><div class="product-price">7.50€</div></div>
-            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Hummus (clásico o de remolacha), nido de cintas de calabacín, zanahoria y pimientos del piquillo.', '6.50€', 's_huerta.jpg', 'Gluten, Sésamo')">
-                <div class="product-info"><h3>Huerta Arcoíris</h3></div><div class="product-price">6.50€</div></div>
-            <div class="product-card" onclick="abrir('El Forastero', 'Carne de ternera desmechada, Queso semicurado fundido, Pepinillos agridulces y Mostaza-Miel.', '7.90€', 's_forastero.jpg', 'Gluten, Lácteos, Mostaza')">
-                <div class="product-info"><h3>El Forastero</h3></div><div class="product-price">7.90€</div></div>
-            <div class="product-card" onclick="abrir('Bagel Nórdico', 'Salmón ahumado, Crema de aguacate con lima, Queso crema, Espinaca baby y Cebolla morada encurtida.', '7.00€', 's_nordico.jpg', 'Gluten, Sésamo, Lácteos, Pescado')">
-                <div class="product-info"><h3>Bagel Nórdico</h3></div><div class="product-price">7.00€</div></div>
-            <div class="product-card" onclick="abrir('El De Siempre', 'Jamón cocido, Queso fundido, Rodajas de tomate natural y Lechuga fresca.', '5.50€', 's_siempre.jpg', 'Gluten, Lácteos')">
-                <div class="product-info"><h3>El De Siempre</h3></div><div class="product-price">5.50€</div></div>
-            <div class="product-card" onclick="abrir('Tortilla', 'Alioli, tortilla de patata y pimientos.', 'Consultar', 's_tortilla.jpg', 'Gluten, Huevos')">
-                <div class="product-info"><h3>Tortilla</h3></div><div class="product-price">Ver</div></div>
+            <div class="product-card" onclick="abrir('El Castizo', 'Pan rústico, Jamón Serrano, Queso semicurado fundido, Tomates secos en aceite y Espinaca baby.', '6.50€', 's_castizo.jpg', 'Gluten, Lácteos')"><h3>El Castizo</h3><div class="product-price">6.50€</div></div>
+            <div class="product-card" onclick="abrir('Huerta Arcoíris', 'Pan rústico, Hummus, cintas de calabacín, zanahoria y pimientos del piquillo.', '6.00€', 's_huerta.jpg', 'Gluten, Sésamo')"><h3>Huerta Arcoíris</h3><div class="product-price">6.00€</div></div>
+            <div class="product-card" onclick="abrir('El Forastero', 'Pan rústico, Carne de ternera desmechada, Queso semicurado fundido, Pepinillos agridulces y Mostaza-Miel.', '7.90€', 's_forastero.jpg', 'Gluten, Lácteos, Mostaza')"><h3>El Forastero</h3><div class="product-price">7.90€</div></div>
+            <div class="product-card" onclick="abrir('Bagel Nórdico', 'Bagel de sésamo, Salmón ahumado, Crema de aguacate con lima, Queso crema, Espinaca baby y Cebolla morada encurtida.', '7.00€', 's_nordico.jpg', 'Gluten, Sésamo, Lácteos, Pescado')"><h3>Bagel Nórdico</h3><div class="product-price">7.00€</div></div>
+            <div class="product-card" onclick="abrir('El De Siempre', 'Pan rústico, Jamón cocido, Queso fundido, Rodajas de tomate natural y Lechuga fresca.', '6.00€', 's_siempre.jpg', 'Gluten, Lácteos')"><h3>El De Siempre</h3><div class="product-price">6.00€</div></div>
+            <div class="product-card" onclick="abrir('Sándwich de Tortilla', 'Pan rústico, Alioli, tortilla de patata y pimientos.', 'Consultar', 's_tortilla.jpg', 'Gluten, Huevos')"><h3>Tortilla</h3><div class="product-price">Consultar</div></div>
         </div>
 
         <!-- SMOOTHIES -->
         <h2 id="smoothies" class="category-title">Smoothies</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-top: -15px; margin-bottom: 20px; font-style: italic;">Con base de zumo de manzana y sin agregado de azúcar.</p>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Rosado', 'Plátano, fresa y pithaya.', 'Reg: 4.00€<br>Gde: 5.00€', 'sm_rosado.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Rosado</h3></div><div class="product-price">4.00€ - 5.00€</div></div>
-            <div class="product-card" onclick="abrir('Berry Dream', 'Fresa, frambuesa y arándanos.', 'Reg: 4.00€<br>Gde: 5.00€', 'sm_berry.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Berry Dream</h3></div><div class="product-price">4.00€ - 5.00€</div></div>
-            <div class="product-card" onclick="abrir('Maña', 'Piña y mango.', 'Reg: 4.00€<br>Gde: 5.00€', 'sm_mana.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Maña</h3></div><div class="product-price">4.00€ - 5.00€</div></div>
-            <div class="product-card" onclick="abrir('Peach Paradise', 'Papaya, fresa y melocotón.', 'Reg: 4.00€<br>Gde: 5.00€', 'sm_peach.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Peach Paradise</h3></div><div class="product-price">4.00€ - 5.00€</div></div>
-            <div class="product-card" onclick="abrir('Mix', 'Sandía, piña y melón.', 'Reg: 4.00€<br>Gde: 5.00€', 'sm_mix.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Mix</h3></div><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Rosado', 'Plátano, fresa y pithaya.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'sm_rosado.jpg', 'Sin alérgenos')"><h3>Rosado</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Berry Dream', 'Fresa, frambuesa y arándanos.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'sm_berry.jpg', 'Sin alérgenos')"><h3>Berry Dream</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Maña', 'Piña y mango.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'sm_mana.jpg', 'Sin alérgenos')"><h3>Maña</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Peach Paradise', 'Papaya, fresa y melocotón.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'sm_peach.jpg', 'Sin alérgenos')"><h3>Peach Paradise</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Mix', 'Sandía, piña y melón.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'sm_mix.jpg', 'Sin alérgenos')"><h3>Mix</h3><div class="product-price">4.00€ - 5.00€</div></div>
         </div>
 
         <!-- ZUMOS -->
         <h2 id="zumos" class="category-title">Zumos Naturales</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Detox', 'Pepino, apio, limón, manzana, jengibre.', 'Consultar', 'z_detox.jpg', 'Apio')">
-                <div class="product-info"><h3>Detox</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Sunshine', 'Zanahoria, manzana, naranja.', 'Consultar', 'z_sunshine.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Sunshine</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Red Power', 'Remolacha, naranja, manzana.', 'Consultar', 'z_red.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Red Power</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Fresh Fusion', 'Sandía, fresa, limón.', 'Consultar', 'z_fresh.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Fresh Fusion</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Waikiki', 'Kiwi, fresa, manzana.', 'Consultar', 'z_waikiki.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Waikiki</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Tropical', 'Piña, espinaca, manzana.', 'Consultar', 'z_tropical.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Tropical</h3></div><div class="product-price">Ver</div></div>
+            <div class="product-card" onclick="abrir('Detox', 'Pepino, apio, limón, manzana, jengibre.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_detox.jpg', 'Apio')"><h3>Detox</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Sunshine', 'Zanahoria, manzana, naranja.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_sunshine.jpg', 'Sin alérgenos')"><h3>Sunshine</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Red Power', 'Remolacha, naranja, manzana.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_red.jpg', 'Sin alérgenos')"><h3>Red Power</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Fresh Fusion', 'Sandía, fresa, limón.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_fresh.jpg', 'Sin alérgenos')"><h3>Fresh Fusion</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Waikiki', 'Kiwi, fresa, manzana.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_waikiki.jpg', 'Sin alérgenos')"><h3>Waikiki</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Tropical', 'Piña, espinaca, manzana.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'z_tropical.jpg', 'Sin alérgenos')"><h3>Tropical</h3><div class="product-price">4.00€ - 5.00€</div></div>
         </div>
 
-        <!-- BATIDOS -->
-        <h2 id="batidos" class="category-title">Batidos de Fruta</h2>
+        <!-- MILKSHAKES UNIFICADOS -->
+        <h2 id="milkshakes" class="category-title">Milkshakes</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Plátano', 'Plátano, leche, hielo.', 'Consultar', 'b_platano.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Plátano</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Fresas', 'Fresa, leche, hielo.', 'Consultar', 'b_fresa.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Fresas</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Fresa-Plátano', 'Fresa, plátano, leche, hielo.', 'Consultar', 'b_fresa_platano.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Fresa-Plátano</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Plátano-Cacao', 'Plátano, cacao, leche, hielo.', 'Consultar', 'b_cacao.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Plátano-Cacao</h3></div><div class="product-price">Ver</div></div>
-        </div>
+            <h3 class="sub-category">Clásicos (Sin Helado)</h3>
+            <div class="product-card" onclick="abrir('Plátano', 'Plátano, leche, hielo.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'b_platano.jpg', 'Lácteos')"><h3>Plátano</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Fresas', 'Fresa, leche, hielo.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'b_fresa.jpg', 'Lácteos')"><h3>Fresas</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Fresa-Plátano', 'Fresa, plátano, leche, hielo.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'b_fresa_platano.jpg', 'Lácteos')"><h3>Fresa-Plátano</h3><div class="product-price">4.00€ - 5.00€</div></div>
+            <div class="product-card" onclick="abrir('Plátano-Cacao', 'Plátano, cacao, leche, hielo.', 'Regular (350cc): 4.00€<br>Grande (500cc): 5.00€', 'b_cacao.jpg', 'Lácteos')"><h3>Plátano-Cacao</h3><div class="product-price">4.00€ - 5.00€</div></div>
 
-        <!-- MILKSHAKES -->
-        <h2 id="milkshakes" class="category-title">Milkshakes Premium</h2>
-        <div class="category-grid">
-            <div class="product-card" onclick="abrir('Chocolate', 'Choco, avellanas, nata.', 'Consultar', 'm_choco.jpg', 'Lácteos, Frutos Secos')">
-                <div class="product-info"><h3>Chocolate</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Fresa', 'Helado fresa, nata.', 'Consultar', 'm_fresa.jpg', 'Lácteos')">
-                <div class="product-info"><h3>Fresa</h3></div><div class="product-price">Ver</div></div>
-            <div class="product-card" onclick="abrir('Oreo', 'Helado nata, oreo, nata.', 'Consultar', 'm_oreo.jpg', 'Gluten, Lácteos, Soja')">
-                <div class="product-info"><h3>Oreo</h3></div><div class="product-price">Ver</div></div>
+            <h3 class="sub-category">Premium (Con Helado)</h3>
+            <div class="product-card" onclick="abrir('Chocolate', 'Helado de chocolate, sirope con avellanas, nata montada.', 'Regular (350cc): 5.00€<br>Grande (500cc): 6.00€', 'm_choco.jpg', 'Lácteos, Frutos Secos')"><h3>Chocolate</h3><div class="product-price">5.00€ - 6.00€</div></div>
+            <div class="product-card" onclick="abrir('Fresa', 'Helado de fresa, sirope, nata montada.', 'Regular (350cc): 5.00€<br>Grande (500cc): 6.00€', 'm_fresa.jpg', 'Lácteos')"><h3>Fresa</h3><div class="product-price">5.00€ - 6.00€</div></div>
+            <div class="product-card" onclick="abrir('Oreo', 'Helado de nata, galletitas oreo, sirope, nata montada.', 'Regular (350cc): 5.00€<br>Grande (500cc): 6.00€', 'm_oreo.jpg', 'Gluten, Lácteos, Soja')"><h3>Oreo</h3><div class="product-price">5.00€ - 6.00€</div></div>
+            <div class="product-card" onclick="abrir('Dulce de Leche', 'Helado de nata, dulce de leche, leche y hielo.', 'Regular (350cc): 5.00€<br>Grande (500cc): 6.00€', 'm_dulce.jpg', 'Lácteos')"><h3>Dulce de Leche</h3><div class="product-price">5.00€ - 6.00€</div></div>
+            <div class="product-card" onclick="abrir('Pistacho', 'Helado de nata, pistacho, leche y hielo.', 'Regular (350cc): 5.00€<br>Grande (500cc): 6.00€', 'm_pistacho.jpg', 'Lácteos, Frutos Secos')"><h3>Pistacho</h3><div class="product-price">5.00€ - 6.00€</div></div>
         </div>
 
         <!-- POSTRES -->
         <h2 id="postres" class="category-title">Postres</h2>
         <div class="category-grid">
-            <div class="product-card" onclick="abrir('Tiramisú', 'Café, cacao, mascarpone.', '4.00€', 'tiramisu.jpg', 'Gluten, Lácteos, Huevos')">
-                <div class="product-info"><h3>Tiramisú</h3></div><div class="product-price">4.00€</div></div>
-            <div class="product-card" onclick="abrir('Mix Fruta', 'Fruta de temporada.', '3.00€', 'mix_fruta.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Mix Fruta</h3></div><div class="product-price">3.00€</div></div>
+            <div class="product-card" onclick="abrir('Tiramisú', 'Postre casero de café, cacao y mascarpone.', '4.00€', 'tiramisu.jpg', 'Gluten, Lácteos, Huevos')"><h3>Tiramisú</h3><div class="product-price">4.00€</div></div>
+            <div class="product-card" onclick="abrir('Mix Fruta', 'Selección de frutas frescas de temporada.', '3.00€', 'mix_fruta.jpg', 'Sin alérgenos')"><h3>Mix Fruta</h3><div class="product-price">3.00€</div></div>
         </div>
 
         <!-- BEBIDAS -->
         <h2 id="bebidas" class="category-title">Bebidas</h2>
         <div class="category-grid">
             <h3 class="sub-category">Con Alcohol</h3>
-            <div class="product-card" onclick="abrir('Cerveza 25cl', '25cl.', '1.90€', 'cerveza_bot.jpg', 'Gluten')">
-                <div class="product-info"><h3>Cerveza 25cl</h3></div><div class="product-price">1.90€</div></div>
-            <div class="product-card" onclick="abrir('Cerveza 33cl', '33cl.', '2.20€', 'cerveza_bote.jpg', 'Gluten')">
-                <div class="product-info"><h3>Cerveza 33cl</h3></div><div class="product-price">2.20€</div></div>
-            <div class="product-card" onclick="abrir('Caña', 'Grifo.', '2.00€', 'cana.jpg', 'Gluten')">
-                <div class="product-info"><h3>Caña</h3></div><div class="product-price">2.00€</div></div>
-            <div class="product-card" onclick="abrir('Pinta', 'Grifo.', '4.00€', 'pinta.jpg', 'Gluten')">
-                <div class="product-info"><h3>Pinta</h3></div><div class="product-price">4.00€</div></div>
-            <div class="product-card" onclick="abrir('Tinto Botellín', '33cl.', '2.20€', 'tinto_bot.jpg', 'Sulfitos')">
-                <div class="product-info"><h3>Tinto Verano</h3></div><div class="product-price">2.20€</div></div>
-            <div class="product-card" onclick="abrir('Tinto Grifo', 'Grifo.', '3.50€', 'tinto_grifo.jpg', 'Sulfitos')">
-                <div class="product-info"><h3>Tinto Grifo</h3></div><div class="product-price">3.50€</div></div>
+            <div class="product-card" onclick="abrir('Cerveza 25cl', 'Botellín.', '1.90€', 'cerveza_bot.jpg', 'Gluten')"><h3>Cerveza 25cl</h3><div class="product-price">1.90€</div></div>
+            <div class="product-card" onclick="abrir('Cerveza 33cl', 'Bote.', '2.20€', 'cerveza_bote.jpg', 'Gluten')"><h3>Cerveza 33cl</h3><div class="product-price">2.20€</div></div>
+            <div class="product-card" onclick="abrir('Caña', 'Grifo Águila Dorada.', '2.00€', 'cana.jpg', 'Gluten')"><h3>Caña</h3><div class="product-price">2.00€</div></div>
+            <div class="product-card" onclick="abrir('Pinta', 'Grifo Águila Dorada.', '4.00€', 'pinta.jpg', 'Gluten')"><h3>Pinta</h3><div class="product-price">4.00€</div></div>
+            <div class="product-card" onclick="abrir('Tinto Verano Botellín', 'Sandevid 33cl.', '2.20€', 'tinto_bot.jpg', 'Sulfitos')"><h3>Tinto Verano</h3><div class="product-price">2.20€</div></div>
+            <div class="product-card" onclick="abrir('Tinto Verano Grifo', 'Ladrón de Verano.', '3.50€', 'tinto_grifo.jpg', 'Sulfitos')"><h3>Tinto Grifo</h3><div class="product-price">3.50€</div></div>
             
             <h3 class="sub-category">Sin Alcohol</h3>
-            <div class="product-card" onclick="abrir('Refrescos', '33cl.', '2.20€', 'refresco.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Refrescos</h3></div><div class="product-price">2.20€</div></div>
-            <div class="product-card" onclick="abrir('Agua 50cl', '50cl.', '1.20€', 'agua_peq.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Agua 50cl</h3></div><div class="product-price">1.20€</div></div>
-            <div class="product-card" onclick="abrir('Agua 1.5L', '1.5L.', '2.00€', 'agua_gde.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Agua 1.5L</h3></div><div class="product-price">2.00€</div></div>
-            <div class="product-card" onclick="abrir('Vichy', 'Agua con gas.', '2.50€', 'vichy.jpg', 'Sin alérgenos')">
-                <div class="product-info"><h3>Vichy</h3></div><div class="product-price">2.50€</div></div>
-            <div class="product-card" onclick="abrir('Red Bull', '25cl.', '2.90€', 'redbull.jpg', 'Cafeína')">
-                <div class="product-info"><h3>Red Bull</h3></div><div class="product-price">2.90€</div></div>
+            <div class="product-card" onclick="abrir('Refrescos', 'Bote 33cl.', '2.20€', 'refresco.jpg', 'Sin alérgenos')"><h3>Refrescos</h3><div class="product-price">2.20€</div></div>
+            <div class="product-card" onclick="abrir('Agua 50cl', 'Pequeña.', '1.20€', 'agua_peq.jpg', 'Sin alérgenos')"><h3>Agua 50cl</h3><div class="product-price">1.20€</div></div>
+            <div class="product-card" onclick="abrir('Agua 1.5L', 'Grande.', '2.00€', 'agua_gde.jpg', 'Sin alérgenos')"><h3>Agua 1.5L</h3><div class="product-price">2.00€</div></div>
+            <div class="product-card" onclick="abrir('Vichy', 'Agua con gas.', '2.50€', 'vichy.jpg', 'Sin alérgenos')"><h3>Vichy</h3><div class="product-price">2.50€</div></div>
+            <div class="product-card" onclick="abrir('Red Bull', '25cl.', '2.90€', 'redbull.jpg', 'Cafeína')"><h3>Red Bull</h3><div class="product-price">2.90€</div></div>
         </div>
     </div>
 
+    <!-- MODAL -->
     <div class="modal-overlay" id="modal">
         <div class="modal-content">
             <button class="close-btn" onclick="cerrar()">✕</button>
